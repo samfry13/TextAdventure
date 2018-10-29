@@ -1,0 +1,9 @@
+{
+    "testlocation" : {
+        "test" : "testlocation, test command response",
+        "test2" : "testlocation, test2 command response"
+    },
+    "testlocation2" : {
+        "test" : "testlocation2, test command response"
+    }
+}
