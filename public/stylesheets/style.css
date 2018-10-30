@@ -1,8 +1,27 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  background-color: black;
+  color: white;
 }
-
-a {
-  color: #00B7FF;
+#body {
+  text-align: center;
+}
+h3 {
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+}
+#answer {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: white solid 1px;
+}
+#answer:focus {
+  outline: none;
+}
+#submit {
+  display: none;
+}
+#choices ul {
+  list-style: inside decimal;
+  font-size: 20px;
 }
