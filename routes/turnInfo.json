@@ -154,7 +154,7 @@
         },
         "talk to him" : {
             "response" : "",
-            "newLocation" : "restartDie"
+            "newLocation" : "14"
         }
     },
     "14" : {

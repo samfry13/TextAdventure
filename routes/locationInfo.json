@@ -22,7 +22,7 @@
     "20" : "As you enter the door, you see a man in front of you. Do you talk to him or attack him?",
     "21" : "The man questions your presence in the castle. You tell him you were travelling. Do you mention the dead man?",
     "22" : "The stranger says the dead man was a friend of his that died while riding his horse a few hours ago. The stranger walks up to you and seems to want a hug, do you hug him?",
-    "restartDie" : "It appears you have died, which you like another chance to learn the secret of the castle?",
+    "restartDie" : "It appears you have died, would you like another chance to learn the secret of the castle?",
     "restartLive" : "Start the story again?",
     "restartWin" : "Congratulations! It appears you have completed this adventure, would you like to end there, or try again in hopes of venturing a different path?"
 }
