@@ -84,7 +84,7 @@ router.get('/newLocation', function(req, res, next) {
 router.get('/commands', function(req, res, next) {
     console.log("In commands route");
     var location = req.query.location;
-    gameData[currentLocation] = location;
+    gameData.currentLocation = location;
     console.log("location: " + location);
     
     var results = {response : "Unknown location: '" + location + "'"};

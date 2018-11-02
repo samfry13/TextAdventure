@@ -1,44 +1,273 @@
 {
-    "testlocation" : {
-        "test" : {
-            "response" : "testlocation, test command response",
-            "requirements" : {
-                
-            },
-            "setFlags" : {
-                "test" : true
-            }
-        },
-        "test2" : {
-            "response" : "testlocation, test2 command response",
-            "requirements" : {
-                "test" : true
-            },
-            "setFlags" : {
-                "test" : false
-            },
-            "newLocation" : "testlocation2"
+    "start" : {
+        "start" : {
+            "response" : "",
+            "newLocation" : "0"
         }
     },
-    "testlocation2" : {
-        "test" : {
-            "response" : "testlocation2, test command response",
-            "requirements" : {
-                
-            },
-            "setFlags" : {
-                "test" : true
-            }
+    "0" : {
+        "keep riding" : {
+            "response" : "You live to see another day, but you will never know what you could have found in that castle",
+            "newLocation" : "restartLive"
         },
-        "test2" : {
-            "response" : "testlocation2, test2 command response",
-            "requirements" : {
-                "test" : true
-            },
-            "setFlags" : {
-                "test" : false
-            },
-            "newLocation" : "testlocation"
+        "investigate the castle" : {
+            "response" : "",
+            "newLocation" : "1"
+        }
+    },
+    "1" : {
+        "go to the stables" : {
+            "response" : "As you approach the stables, you hear a loud wet thump in the forest to your right. Your horse rears and throws you off. As you lie dazed on the ground, you hear footsteps. A man with an axe appears and kills you.",
+            "newLocation" : "restartDie"
+        },
+        "go to the castle doors" : {
+            "response" : "",
+            "newLocation" : "2"
+        }
+    },
+    "2" : {
+        "climb the stairs" : {
+            "response" : "",
+            "newLocation" : "3"
+        },
+        "warm yourslf" : {
+            "response" : "As you approach the fire, you suddenly feel very drowsy. You find yourself falling asleep in a large chair by the fire. You never wake up.",
+            "newLocation" : "restartDie"
+        },
+        "go through the door" : {
+            "response" : "",
+            "newLocation" : "5"
+        },
+        "leave" : {
+            "response" : "You live to see another day, but you will never know what you could have found in that castle",
+            "newLocation" : "restartLive"
+        }
+    },
+    "3" : {
+        "go down the hall" : {
+            "response" : "As you walk down the hall, you hear a rushing noise outside. As you turn to look, you see a great winged shape outside. As you continue to watch, it turns toward the castle and breaks the window in front of you. You never learn what it is, but it kills you quickly.",
+            "newLocation" : "restartDie"
+        },
+        "climb the stairs" : {
+            "response" : "",
+            "newLocation" : "4"
+        }
+    },
+    "4" : {
+        "open the door" : {
+            "response" : "You open the door and come face to face with a man, he turns to you quickly and stabs you in the heart.",
+            "newLocation" : "restartDie"
+        },
+        "keep climbing" : {
+            "response" : "You reach the top of the tower. As you look out at the castle you hear a rushing noise. Something slams into your back and throws you from the tower.",
+            "newLocation" : "restartDie"
+        }
+    },
+    "5" : {
+        "open the door" : {
+            "response" : "You enter the kitchen, as you turn to take in your surroundings a woman attacks you with a butcher’s knife. You die.",
+            "newLocation" : "restartDie"
+        },
+        "climb through the window" : {
+            "response" : "",
+            "newLocation" : "6"
+        }
+    },
+    "6" : {
+        "investigate" : {
+            "response" : "As you approach the stables the man disappears. You enter the stables and the man appears behind you and stabs you in the heart.",
+            "newLocation" : "restartDie"
+        },
+        "hide" : {
+            "response" : "",
+            "newLocation" : "7"
+        }
+    },
+    "7" : {
+        "hide" : {
+            "response" : "As you hide in the shadows, you hear a rushing above you. You look up as a large black mass lands on you and kills you.",
+            "newLocation" : "restartDie"
+        },
+        "enter the castle" : {
+            "response" : "As you enter the castle, you run into the man you saw. He turns around and stabs you in the heart. You die.",
+            "newLocation" : "restartDie"
+        },
+        "investigate" : {
+            "response" : "",
+            "newLocation" : "8"
+        }
+    },
+    "8" : {
+        "stay" : {
+            "response" : "As you contemplate your next move, a man appears at the other end of the stable. You start to question him about the dead man. He moves toward you and kills you.",
+            "newLocation" : "restartDie"
+        },
+        "leave" : {
+            "response" : "",
+            "newLocation" : "9"
+        }
+    },
+    "9" : {
+        "yes" : {
+            "response" : "",
+            "newLocation" : "10"
+        },
+        "no" : {
+            "response" : "",
+            "newLocation" : "17"
+        }
+    },
+    "10" : {
+        "warm yourself" : {
+            "response" : "As you approach the fire, you suddenly feel very drowsy. You find yourself falling asleep in a large chair by the fire. You never wake up.",
+            "newLocation" : "restartDie"
+        },
+        "climb the stairs" : {
+            "response" : "",
+            "newLocation" : "11"
+        }
+    },
+    "11" : {
+        "go down the hall" : {
+            "response" : "As you walk down the hall, you hear a rushing noise outside. As you turn to look, you see a great winged shape outside. As you continue to watch, it turns toward the castle and breaks the window in front of you. You never learn what it is, but it kills you quickly.",
+            "newLocation" : "restartDie"
+        },
+        "climb the stairs" : {
+            "response" : "",
+            "newLocation" : "12"
+        }
+    },
+    "12" : {
+        "keep climbing" : {
+            "response" : "You reach the top of the tower. As you look out at the castle you hear a rushing noise. Something slams into your back and throws you from the tower.",
+            "newLocation" : "restartDie"
+        },
+        "open the door" : {
+            "response" : "",
+            "newLocation" : "13"
+        }
+    },
+    "13" : {
+        "stab him" : {
+            "response" : "The man moves faster than you. You stabs you in the heart and you hear him laughing as you die.",
+            "newLocation" : "restartDie"
+        },
+        "talk to him" : {
+            "response" : "",
+            "newLocation" : "restartDie"
+        }
+    },
+    "14" : {
+        "yes" : {
+            "response" : "",
+            "newLocation" : "15"
+        },
+        "no" : {
+            "response" : "The man comes closer to you and stabs you in the heart, you die.",
+            "newLocation" : "restartDie"
+        }
+    },
+    "15" : {
+        "yes" : {
+            "response" : "The man comes closer to you and stabs you in the heart, you die.",
+            "newLocation" : "restartDie"
+        },
+        "no" : {
+            "response" : "",
+            "newLocation" : "16"
+        }
+    },
+    "16" : {
+        "finish" : {
+            "response" : "",
+            "newLocation" : "restartWin"
+        }
+    },
+    "17" : {
+        "warm yourself" : {
+            "response" : "As you approach the fire, you suddenly feel very drowsy. You find yourself falling asleep in a large chair by the fire. You never wake up.",
+            "newLocation" : "restartDie"
+        },
+        "climb the stairs" : {
+            "response" : "",
+            "newLocation" : "18"
+        }
+    },
+    "18" : {
+        "go down the hall" : {
+            "response" : "As you walk down the hall, you hear a rushing noise outside. As you turn to look, you see a great winged shape outside. As you continue to watch, it turns toward the castle and breaks the window in front of you. You never learn what it is, but it kills you quickly.",
+            "newLocation" : "restartDie"
+        },
+        "climb the stairs" : {
+            "response" : "",
+            "newLocation" : "19"
+        }
+    },
+    "19" : {
+        "keep climbing" : {
+            "response" : "You reach the top of the tower. As you look out at the castle you hear a rushing noise. Something slams into your back and throws you from the tower.",
+            "newLocation" : "restartDie"
+        },
+        "open the door" : {
+            "response" : "",
+            "newLocation" : "20"
+        }
+    },
+    "20" : {
+        "talk to him" : {
+            "response" : "",
+            "newLocation" : "21"
+        },
+        "attack him" : {
+            "response" : "The man moves faster than you. You stabs you in the heart and you hear him laughing as you die.",
+            "newLocation" : "restartDie"
+        }
+    },
+    "21" : {
+        "yes" : {
+            "response" : "",
+            "newLocation" : "22"
+        },
+        "no" : {
+            "response" : "The man comes closer to you and stabs you in the heart, you die.",
+            "newLocation" : "restartDie"
+        }
+    },
+    "22" : {
+        "yes" : {
+            "response" : "The man comes closer to you and stabs you in the heart, you die.",
+            "newLocation" : "restartDie"
+        },
+        "no" : {
+            "response" : "The man comes closer to you and stabs you in the heart, you die.",
+            "newLocation" : "restartDie"
+        }
+    },
+    "restartDie" : {
+        "yes" : {
+            "response" : "",
+            "newLocation" : "0"
+        },
+        "no" : {
+            "response" : "Thank you for playing!"
+        }
+    },
+    "restartLive" : {
+        "yes" : {
+            "response" : "",
+            "newLocation" : "0"
+        },
+        "no" : {
+            "response" : "Thank you for playing!"
+        }
+    },
+    "restartWin" : {
+        "yes" : {
+            "response" : "",
+            "newLocation" : "0"
+        },
+        "no" : {
+            "response" : "Thank you for playing!"
         }
     }
 }

@@ -1,9 +1,8 @@
+/*global $*/
 $(document).ready(function() {
     $('#answer').focus();
 
-    var location = "testlocation"
-
-    updateLocation(location);
+    var location = "start";
 
     function updateLocation(newLocation) {
         location = newLocation;
@@ -24,7 +23,7 @@ $(document).ready(function() {
             everything += "</ul>";
             
             $("#commandResponse").html(everything);
-        })
+        });
     }
 
     function turn(command, location) {
@@ -36,7 +35,7 @@ $(document).ready(function() {
                 if (data.hasOwnProperty("newLocation")) {
                     updateLocation(data.newLocation);
                 }
-            }) 
+            });
         }
         else {
             $("#commandResponse").text("");
@@ -46,7 +45,7 @@ $(document).ready(function() {
     $(document).keypress(function(e) {
         if (e.which == 13) {
             e.preventDefault();
-            var answer = $("#answer").val()
+            var answer = $("#answer").val();
             if (answer == "help") {
                 getCommands(location);
             }
@@ -55,5 +54,5 @@ $(document).ready(function() {
             }
             $('#answer').val("");
         }
-    })
+    });
 });
