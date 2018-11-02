@@ -1,9 +1,44 @@
 {
     "testlocation" : {
-        "test" : "testlocation, test command response",
-        "test2" : "testlocation, test2 command response"
+        "test" : {
+            "response" : "testlocation, test command response",
+            "requirements" : {
+                
+            },
+            "setFlags" : {
+                "test" : true
+            }
+        },
+        "test2" : {
+            "response" : "testlocation, test2 command response",
+            "requirements" : {
+                "test" : true
+            },
+            "setFlags" : {
+                "test" : false
+            },
+            "newLocation" : "testlocation2"
+        }
     },
     "testlocation2" : {
-        "test" : "testlocation2, test command response"
+        "test" : {
+            "response" : "testlocation2, test command response",
+            "requirements" : {
+                
+            },
+            "setFlags" : {
+                "test" : true
+            }
+        },
+        "test2" : {
+            "response" : "testlocation2, test2 command response",
+            "requirements" : {
+                "test" : true
+            },
+            "setFlags" : {
+                "test" : false
+            },
+            "newLocation" : "testlocation"
+        }
     }
 }

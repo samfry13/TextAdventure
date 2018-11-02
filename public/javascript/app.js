@@ -4,9 +4,9 @@ $(document).ready(function() {
     var location = "testlocation"
 
     updateLocation(location);
-    getCommands(location);
 
     function updateLocation(newLocation) {
+        location = newLocation;
         var url = '/newLocation?newLocation=';
         url += newLocation;
         $.getJSON(url, function(data) {
@@ -17,26 +17,42 @@ $(document).ready(function() {
     function getCommands(location) {
         var url = '/commands?location=' + location;
         $.getJSON(url, function(data) {
-            var everything = "<ul>";
+            var everything = "<h6>Valid Commands:</h6><ul>";
             for (var i = 0; i < data.response.length; i++) {
                 everything += "<li>" + data.response[i] +"</li>";
             }
             everything += "</ul>";
-            $('#choices').html(everything);
+            
+            $("#commandResponse").html(everything);
         })
     }
 
     function turn(command, location) {
-        var url = '/turn?command=' + command + "&location=" + location;
-        $.getJSON(url, function(data) {
-            console.log(data);
-        }) 
+        if (command != "" && location != "") {
+            var url = '/turn?command=' + command + "&location=" + location;
+            $.getJSON(url, function(data) {
+                console.log(data);
+                $("#commandResponse").text(data.response);
+                if (data.hasOwnProperty("newLocation")) {
+                    updateLocation(data.newLocation);
+                }
+            }) 
+        }
+        else {
+            $("#commandResponse").text("");
+        }
     }
 
     $(document).keypress(function(e) {
         if (e.which == 13) {
             e.preventDefault();
-            turn($('#answer').val(), location);
+            var answer = $("#answer").val()
+            if (answer == "help") {
+                getCommands(location);
+            }
+            else {
+                turn($('#answer').val(), location);
+            }
             $('#answer').val("");
         }
     })
